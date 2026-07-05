@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beats - The Money Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --void: #0c0a0a;
+    --stone: #1a1616;
+    --crimson: #6e0f1a;
+    --crimson-bright: #9c1d2b;
+    --silver: #b8b0a4;
+    --bone: #e7e0d3;
+    --line: rgba(184, 176, 164, 0.18);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: radial-gradient(ellipse at top, #201a1a 0%, var(--void) 60%);
+    color: var(--bone);
+    font-family: 'Cinzel', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  header {
+    width: 100%;
+    background: linear-gradient(180deg, var(--stone) 0%, var(--void) 100%);
+    color: var(--bone);
+    text-align: center;
+    padding: 40px 20px 30px;
+    border-bottom: 3px solid var(--crimson);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.6);
+  }
+
+  header h1 {
+    margin: 0;
+    font-family: 'UnifrakturCook', cursive;
+    letter-spacing: 2px;
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    color: var(--bone);
+    text-shadow: 0 0 12px rgba(110, 15, 26, 0.7), 0 2px 2px rgba(0,0,0,0.8);
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 14px;
+    color: var(--silver);
+    text-decoration: none;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--crimson);
+    padding-bottom: 2px;
+  }
+
+  .back-link:hover { color: var(--bone); }
+
+  main {
+    width: 100%;
+    max-width: 560px;
+    padding: 56px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+  }
+
+  .track-card {
+    width: 100%;
+    background: var(--stone);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 36px 28px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  .track-name {
+    font-family: 'UnifrakturCook', cursive;
+    color: var(--crimson-bright);
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    margin: 0 0 24px;
+    text-shadow: 0 0 10px rgba(156, 29, 43, 0.5);
+  }
+
+  audio {
+    width: 100%;
+    /* Give the native player a darker, gothic tint */
+    filter: invert(88%) hue-rotate(180deg) contrast(0.9);
+    border-radius: 30px;
+  }
+
+  .purchase-btn {
+    display: inline-block;
+    margin-top: 36px;
+    background: var(--void);
+    color: var(--bone);
+    padding: 16px 36px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 1px solid var(--crimson);
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+
+  .purchase-btn:hover,
+  .purchase-btn:focus-visible {
+    background: var(--crimson);
+    border-color: var(--crimson-bright);
+    outline: none;
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>Beats</h1>
+    <a class="back-link" href="index.html">&larr; Back to store</a>
+  </header>
+
+  <main>
+    <div class="track-card">
+      <!-- Track name -->
+      <p class="track-name">Not Helmet Therapy</p>
+
+      <audio controls>
+        <source src="audio/not_helmet_therapy.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <a class="purchase-btn" href="images/purchase.jpg" target="_blank">To Purchase Click Here</a>
+  </main>
+
+</body>
+</html>

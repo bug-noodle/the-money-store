@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Money Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --void: #0c0a0a;
+    --stone: #1a1616;
+    --crimson: #6e0f1a;
+    --crimson-bright: #9c1d2b;
+    --silver: #b8b0a4;
+    --bone: #e7e0d3;
+    --line: rgba(184, 176, 164, 0.18);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: radial-gradient(ellipse at top, #201a1a 0%, var(--void) 60%);
+    color: var(--bone);
+    font-family: 'Cinzel', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  header {
+    width: 100%;
+    background: linear-gradient(180deg, var(--stone) 0%, var(--void) 100%);
+    color: var(--bone);
+    text-align: center;
+    padding: 48px 20px 36px;
+    border-bottom: 3px solid var(--crimson);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.6);
+    position: relative;
+  }
+
+  header h1 {
+    margin: 0;
+    font-family: 'UnifrakturCook', cursive;
+    letter-spacing: 2px;
+    font-size: clamp(2.4rem, 7vw, 4rem);
+    color: var(--bone);
+    text-shadow: 0 0 12px rgba(110, 15, 26, 0.7), 0 2px 2px rgba(0,0,0,0.8);
+  }
+
+  header p {
+    margin: 10px 0 0;
+    letter-spacing: 4px;
+    font-size: 0.75rem;
+    color: var(--silver);
+    text-transform: uppercase;
+  }
+
+  main {
+    width: 100%;
+    max-width: 720px;
+    padding: 48px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+    width: 100%;
+  }
+
+  .category-btn {
+    background: var(--stone);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 28px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--bone);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+
+  .category-btn:hover,
+  .category-btn:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(110, 15, 26, 0.35);
+    border-color: var(--crimson-bright);
+    outline: none;
+  }
+
+  .category-btn img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 4px;
+    background: var(--void);
+    border: 1px solid var(--line);
+  }
+
+  .category-btn span {
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: var(--silver);
+  }
+
+  .coming-soon {
+    margin: 44px 0 34px;
+    font-family: 'UnifrakturCook', cursive;
+    color: var(--crimson-bright);
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(156, 29, 43, 0.5);
+  }
+
+  .action-btns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .support-btn {
+    display: inline-block;
+    background: var(--void);
+    color: var(--bone);
+    padding: 14px 32px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 1px solid var(--crimson);
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+
+  .support-btn:hover,
+  .support-btn:focus-visible {
+    background: var(--crimson);
+    border-color: var(--crimson-bright);
+    outline: none;
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>The Money Store</h1>
+    <p>Satirical first repo</p>
+  </header>
+
+  <main>
+    <div class="categories">
+
+      <!-- Beats category image -->
+      <a class="category-btn" href="beats.html">
+        <img src="images/beats-icon.jpg" alt="Beats">
+        <span>Beats</span>
+      </a>
+
+      <a class="category-btn" href="misc.html">
+        <img src="images/misc-icon.jpg" alt="Miscellaneous">
+        <span>Miscellaneous</span>
+      </a>
+
+    </div>
+
+    <p class="coming-soon">Adding more soon...</p>
+
+    <div class="action-btns">
+      <a class="support-btn" href="images/support.jpg" target="_blank">Support</a>
+      <a class="support-btn" href="images/help.jpg" target="_blank">Help</a>
+    </div>
+  </main>
+
+</body>
+</html>
